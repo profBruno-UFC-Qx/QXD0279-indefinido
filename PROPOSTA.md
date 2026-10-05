@@ -18,8 +18,8 @@ Não tem extensão.
 
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
-- Administrador
-- Usuário não logado/Visitante 
+- Administrador/Moderador
+- Visitante
 
 > Tenha em mente que obrigatoriamente a aplicação deve possuir funcionalidades acessíveis a todos os tipos de usuário e outra funcionalidades restritas a certos tipos de usuários.
 
@@ -27,10 +27,12 @@ Não tem extensão.
 
 Descreve ou liste brevemente as principais funcionalidades da aplicação que será desenvolvida. Destaque a funcionalidades que serão acessíveis a todos os usuários e aquelas restritas a usuários logados.
 
-- Adicionar substâncias/livros/relatos: Admin
-- Remover substâncias/livros/relatos: Admin
+- Adicionar substâncias/livros/relatos: Admin/Moderador
+- Remover substâncias/livros/relatos: Admin/Moderador
 - Editar: Admin
-- Usuário não logado: pode ler e adicionar, mas o que for adicionado passaria para o Admin aprovar.
+  
+- Visitante: pode ler/ver e adicionar relato/substância/livro ou material audiovisual. Para ser mais explicativo: (lembrando que quero implementar só 2 coisas: substâncias e relatos OU substâncias e materiais(livro/audiovisual/podcast/etc), mas o que for adicionado passaria para o Admin aprovar. Esse usuário NÃO teria login e o preenchimento para cadastro do item (relato/substância/etc) seria similar à um forms de comentários em um blog: pode optar por colocar nome, email OU postar anonimamente, além disso a descrição e mais itens que dependeriam do que esse visitante fosse cadastrar. Após isso, o que for cadastrado passará por uma supervisão do Admin/Moderador, apenas para se certificar que não é troll e que não contém discurso de ódio ou afins...
+
 
 ## :spiral_calendar: Entidades ou tabelas do sistema
 
@@ -39,3 +41,6 @@ Descreve ou liste brevemente as principais funcionalidades da aplicação que se
 
 - Substâncias: 
   - Atributos: id, nome, tipo (natural, sintético, etc), descrição, efeitos
+
+- Relato / Indicação de livro / Seja lá o que for
+  - data, nome, nome de quem cadastrou (caso tenha sido feito por um visitante que se identificou), id
